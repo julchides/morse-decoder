@@ -52,11 +52,9 @@ function decode(expr) {
   }
 
   for (let j = 0; j < arrMorse.length; j++) {
-    if (arrMorse[j] !== "**********") {
-      strResult = strResult + MORSE_TABLE[arrMorse[j]];
-    } else {
-      strResult = strResult + " ";
-    }
+    arrMorse[j] !== "**********"
+      ? (strResult = strResult + MORSE_TABLE[arrMorse[j]])
+      : (strResult = strResult + " ");
   }
 
   return strResult;
