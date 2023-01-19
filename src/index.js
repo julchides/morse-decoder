@@ -51,10 +51,10 @@ function decode(expr) {
     );
   }
 
-  for (let j = 0; j < arrMorse.length; j++) {
-    arrMorse[j] !== "**********"
-      ? (strResult = strResult + MORSE_TABLE[arrMorse[j]])
-      : (strResult = strResult + " ");
+  for (const key of arrMorse.keys()) {
+    arrMorse[key] !== "**********"
+      ? (strResult += MORSE_TABLE[arrMorse[key]])
+      : (strResult += " ");
   }
 
   return strResult;
